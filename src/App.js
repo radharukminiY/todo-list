@@ -20,8 +20,9 @@ class App extends Component {
 
   // initialise database object
   componentDidMount() {
-    this.db = firebase.database();
-    this.listenForChange();
+    var firebase = require('firebase/app');
+    require('firebase/database');
+    //this.listenForChange();
   }
 
   // update the notes array on deletion or insertion or updation of a note
